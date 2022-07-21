@@ -6,3 +6,24 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+:root {
+  /* Colors */
+  --light-green-color: #7ed56f;
+  --medium-green-color: #7ed56f;
+  --dark-green-color: #7ed56f;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #777;
+}
