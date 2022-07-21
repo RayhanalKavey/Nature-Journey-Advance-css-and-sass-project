@@ -40,8 +40,17 @@ body {
     ),
     url(../img/hero.jpg);
   background-size: cover;
-  /* Always stay top of the container. Crop the bottom */
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  /* clip-path: polygon(
+    20% 0%,
+    80% 0%,
+    100% 20%,
+    100% 80%,
+    80% 100%,
+    20% 100%,
+    0% 80%,
+    0% 20%
+  ); */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
