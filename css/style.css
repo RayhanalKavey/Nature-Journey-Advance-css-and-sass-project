@@ -10,10 +10,12 @@ COLORS:
   --light-text-color: #dfd9d9;
   --light-background-color: #dfd9d9;
 }
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 html {
   font-size: 62.5%;
@@ -25,6 +27,7 @@ body {
   line-height: 1.7;
   color: var(--body-color);
   padding: 3rem;
+  box-sizing: border-box;
 }
 /* =================
     Header SectioN
@@ -53,15 +56,15 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75vh);
   position: relative;
 }
-.logo-box {
+.header__logo-box {
   position: absolute;
   top: 3rem;
   left: 3rem;
 }
-.logo {
+.header__logo {
   height: 6rem;
 }
-.text-box {
+.header__text-box {
   position: absolute;
   top: 35%;
   left: 50%;
@@ -74,14 +77,14 @@ body {
   margin-bottom: 6rem;
   backface-visibility: hidden;
 }
-.heading-primary-main {
+.heading-primary--main {
   display: block;
   font-size: 6rem;
   font-weight: 400;
   letter-spacing: 3rem;
   animation: leftslider 1s ease-out 0.1s;
 }
-.heading-primary-sub {
+.heading-primary--sub {
   display: block;
   font-size: 2rem;
   font-weight: 400;
@@ -126,6 +129,7 @@ body {
     opacity: 1;
   }
 }
+/* Clickable button */
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
@@ -146,7 +150,7 @@ body {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
   transform: translateY(-1px);
 }
-.btn-white {
+.btn--white {
   background-color: var(--light-background-color);
 }
 /* Using after pseudo element behind the button */
@@ -162,14 +166,14 @@ body {
   z-index: -1;
   transition: all 0.4s;
 }
-.btn-white::after {
+.btn--white::after {
   background-color: var(--light-background-color);
 }
 .btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
 }
-.btn-animation {
+.btn--animation {
   animation: bottomslider 0.5s ease-out 0.75s;
   animation-fill-mode: backwards;
 }
