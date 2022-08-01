@@ -1,18 +1,21 @@
 /*
 COLORS:
 */
-:root {
-  /* Colors */
-  --light-brown-color: #eca15a;
-  --medium-brown-color: #c68951;
-  --dark-brown-color: #5f2c11;
-  --body-color: #777;
-  --light-text-color: #dfd9d9;
-  --light-background-color: #dfd9d9;
-}
+// :root {
+// /* Colors */
+//   --light-brown-color: #eca15a;
+//   --medium-brown-color: #c68951;
+//   --dark-brown-color: #5f2c11;
+//   --body-color: #777;
+//   --light-text-color: #dfd9d9;
+//   --light-background-color: #dfd9d9;
+// }
 $color-primary: #c68951;
 $color-primary-light: #eca15a;
 $color-primary-dark: #5f2c11;
+$color-body: #777;
+$light-text-color: #dfd9d9;
+$light-background-color: #dfd9d9;
 *,
 *::after,
 *::before {
@@ -28,7 +31,7 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
-  color: var(--body-color);
+  color: $color-body;
   padding: 3rem;
   box-sizing: border-box;
 }
@@ -75,7 +78,7 @@ body {
   text-align: center;
 }
 .heading-primary {
-  color: var(--light-text-color);
+  color: $light-text-color;
   text-transform: uppercase;
   margin-bottom: 6rem;
   backface-visibility: hidden;
@@ -140,7 +143,7 @@ body {
   padding: 1.5rem 4rem;
   display: inline-block;
   border-radius: 4rem;
-  color: var(--body-color);
+  color: $color-body;
   transition: all 0.2s;
   position: relative;
 }
@@ -154,7 +157,7 @@ body {
   transform: translateY(-1px);
 }
 .btn--white {
-  background-color: var(--light-background-color);
+  background-color: $light-background-color;
 }
 /* Using after pseudo element behind the button */
 .btn::after {
@@ -170,7 +173,7 @@ body {
   transition: all 0.4s;
 }
 .btn--white::after {
-  background-color: var(--light-background-color);
+  background-color: $light-background-color;
 }
 .btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
