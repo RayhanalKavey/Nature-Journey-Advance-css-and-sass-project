@@ -1,0 +1,22 @@
+{
+  "name": "nature-journey-advance-css-and-sass-project",
+  "version": "1.0.0",
+  "description": "nature-journey-project",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RayhanalKavey/Nature-Journey-Advance-css-project.git"
+  },
+  "author": "Rayhan Al Kavey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RayhanalKavey/Nature-Journey-Advance-css-project/issues"
+  },
+  "homepage": "https://github.com/RayhanalKavey/Nature-Journey-Advance-css-project#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

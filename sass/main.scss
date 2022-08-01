@@ -8,18 +8,21 @@ COLORS:
   --dark-brown-color: #5f2c11;
   --body-color: #777;
   --light-text-color: #dfd9d9;
-  --light-background-color: #dfd9d9; }
-
+  --light-background-color: #dfd9d9;
+}
+$color-primary: #c68951;
+$color-primary-light: #eca15a;
+$color-primary-dark: #5f2c11;
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
-
+  box-sizing: inherit;
+}
 html {
-  font-size: 62.5%; }
-
+  font-size: 62.5%;
+}
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -27,14 +30,19 @@ body {
   line-height: 1.7;
   color: var(--body-color);
   padding: 3rem;
-  box-sizing: border-box; }
-
+  box-sizing: border-box;
+}
 /* =================
     Header SectioN
    ================= */
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(236, 161, 90, 0.7), rgba(95, 44, 17, 0.7)), url(../img/hero.jpg);
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.7),
+      rgba($color-primary-dark, 0.7)
+    ),
+    url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -49,72 +57,81 @@ body {
     0% 20%
   ); */
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75vh);
-  position: relative; }
-
+  position: relative;
+}
 .header__logo-box {
   position: absolute;
   top: 3rem;
-  left: 3rem; }
-
+  left: 3rem;
+}
 .header__logo {
-  height: 6rem; }
-
+  height: 6rem;
+}
 .header__text-box {
   position: absolute;
   top: 35%;
   left: 50%;
   transform: translate(-50%, -60%);
-  text-align: center; }
-
+  text-align: center;
+}
 .heading-primary {
   color: var(--light-text-color);
   text-transform: uppercase;
   margin-bottom: 6rem;
-  backface-visibility: hidden; }
-
+  backface-visibility: hidden;
+}
 .heading-primary--main {
   display: block;
   font-size: 6rem;
   font-weight: 400;
   letter-spacing: 3rem;
-  animation: leftslider 1s ease-out 0.1s; }
-
+  animation: leftslider 1s ease-out 0.1s;
+}
 .heading-primary--sub {
   display: block;
   font-size: 2rem;
   font-weight: 400;
   letter-spacing: 1.17rem;
-  animation: rightslider 1s ease-out 0.1s; }
-
+  animation: rightslider 1s ease-out 0.1s;
+}
 /* Animation with keyflame */
 @keyframes leftslider {
   0% {
     opacity: 0;
-    transform: translateX(-10rem); }
+    transform: translateX(-10rem);
+  }
   80% {
     opacity: 0.8;
-    transform: translateX(1rem); }
+    transform: translateX(1rem);
+  }
   100% {
     transform: translate(0);
-    opacity: 1; } }
-
+    opacity: 1;
+  }
+}
 @keyframes rightslider {
   0% {
-    transform: translateX(10rem); }
+    transform: translateX(10rem);
+  }
   80% {
-    transform: translateX(-1rem); }
+    transform: translateX(-1rem);
+  }
   100% {
     transform: translate(0);
-    opacity: 1; } }
-
+    opacity: 1;
+  }
+}
 @keyframes bottomslider {
   0% {
     transform: translateY(5rem);
-    opacity: 0; }
+    opacity: 0;
+  }
+
   100% {
     transform: translate(0);
-    opacity: 1; } }
-
+    opacity: 1;
+  }
+}
 /* Clickable button */
 .btn:link,
 .btn:visited {
@@ -125,20 +142,20 @@ body {
   border-radius: 4rem;
   color: var(--body-color);
   transition: all 0.2s;
-  position: relative; }
-
+  position: relative;
+}
 .btn:hover {
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
-  transform: translateY(-3px); }
-
+  transform: translateY(-3px);
+}
 .btn:active {
   /* box-shadow: none; */
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
-  transform: translateY(-1px); }
-
+  transform: translateY(-1px);
+}
 .btn--white {
-  background-color: var(--light-background-color); }
-
+  background-color: var(--light-background-color);
+}
 /* Using after pseudo element behind the button */
 .btn::after {
   content: " ";
@@ -150,15 +167,16 @@ body {
   left: 0;
   border-radius: 4rem;
   z-index: -1;
-  transition: all 0.4s; }
-
+  transition: all 0.4s;
+}
 .btn--white::after {
-  background-color: var(--light-background-color); }
-
+  background-color: var(--light-background-color);
+}
 .btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0; }
-
+  opacity: 0;
+}
 .btn--animation {
   animation: bottomslider 0.5s ease-out 0.75s;
-  animation-fill-mode: backwards; }
+  animation-fill-mode: backwards;
+}
