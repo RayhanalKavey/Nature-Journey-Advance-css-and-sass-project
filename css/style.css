@@ -1,78 +1,6 @@
 /*
 COLORS:
 */
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit; }
-
-html {
-  font-size: 62.5%; }
-
-body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem;
-  box-sizing: border-box; }
-
-/* =================
-    Header SectioN
-   ================= */
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(236, 161, 90, 0.7), rgba(95, 44, 17, 0.7)), url(../img/hero.jpg);
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
-  /* clip-path: polygon(
-    20% 0%,
-    80% 0%,
-    100% 20%,
-    100% 80%,
-    80% 100%,
-    20% 100%,
-    0% 80%,
-    0% 20%
-  ); */
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75vh);
-  position: relative; }
-  .header__logo-box {
-    position: absolute;
-    top: 3rem;
-    left: 3rem; }
-  .header__logo {
-    height: 6rem; }
-  .header__text-box {
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -60%);
-    text-align: center; }
-
-.heading-primary {
-  color: #dfd9d9;
-  text-transform: uppercase;
-  margin-bottom: 6rem;
-  backface-visibility: hidden; }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3rem;
-    animation: leftslider 1s ease-out 0.1s; }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 400;
-    letter-spacing: 1.17rem;
-    animation: rightslider 1s ease-out 0.1s; }
-
-/* Animation with keyflame */
 @keyframes leftslider {
   0% {
     opacity: 0;
@@ -100,6 +28,45 @@ body {
   100% {
     transform: translate(0);
     opacity: 1; } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
+
+.heading-primary {
+  color: #dfd9d9;
+  text-transform: uppercase;
+  margin-bottom: 6rem;
+  backface-visibility: hidden; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3rem;
+    animation: leftslider 1s ease-out 0.1s; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.17rem;
+    animation: rightslider 1s ease-out 0.1s; }
 
 /* Clickable button */
 /* Using after pseudo element behind the button */
@@ -145,3 +112,37 @@ body {
 .btn--animation {
   animation: bottomslider 0.5s ease-out 0.75s;
   animation-fill-mode: backwards; }
+
+/* =================
+    Header SectioN
+   ================= */
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(236, 161, 90, 0.7), rgba(95, 44, 17, 0.7)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  /* clip-path: polygon(
+    20% 0%,
+    80% 0%,
+    100% 20%,
+    100% 80%,
+    80% 100%,
+    20% 100%,
+    0% 80%,
+    0% 20%
+  ); */
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75vh);
+  position: relative; }
+  .header__logo-box {
+    position: absolute;
+    top: 3rem;
+    left: 3rem; }
+  .header__logo {
+    height: 6rem; }
+  .header__text-box {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    text-align: center; }
